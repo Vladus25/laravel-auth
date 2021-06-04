@@ -1,0 +1,156 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 22px;
+  text-decoration: none;
+  background-color: rgb(199, 199, 199);
+
+  header{
+    text-align: center;
+  }
+
+  main{
+
+    .text-center{
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    ul{
+      display: flex;
+      list-style-type: none;
+      width: 60%;
+      margin: auto;
+      padding-top: 50px;
+
+      li{
+        width: 200px;
+        border: 1px solid black;
+
+        h2{
+          text-align: center;
+
+          border-bottom: 1px solid black;
+        }
+
+        div{
+          text-align: center;
+          border-bottom: 1px solid black;
+        }
+
+        .delete{
+          color: red;
+        }
+
+        .edit{
+          color: black;
+        }
+      }
+    }
+
+    .button-center{
+      text-align: center;
+      padding-top: 40px;
+
+      .home{
+        font-size: 20px;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: rgb(57, 142, 255);
+        color: black;
+        text-align: center;
+      }
+
+      .home:hover{
+        background-color: rgb(255, 185, 103);
+      }
+
+    }
+
+    ul.create-edit{
+
+      display: flex;
+      list-style-type: none;
+      width: 65%;
+      margin: auto;
+      padding-top: 50px;
+
+      li{
+        width: 250px;
+        border: 1px solid black;
+
+        h2{
+          text-align: center;
+          border-bottom: 1px solid black;
+        }
+
+        .checkboxing{
+          text-align: left;
+          overflow: auto;
+          height: 245px;
+
+          input{
+            margin-left: 5px;
+          }
+        }
+
+        div{
+          text-align: center;
+          border-bottom: 1px solid black;
+        }
+
+        input{
+          font-size: 18px;
+        }
+
+        select{
+          width: 245px;
+        }
+
+        #brand{
+          font-size: 18px;
+          height: 32px;
+        }
+
+        .pilots{
+          height: 400px;
+        }
+      }
+    }
+    .button-center{
+      text-align: center;
+      padding-top: 40px;
+
+      .home{
+        font-size: 20px;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: rgb(57, 142, 255);
+        color: black;
+        text-align: center;
+      }
+
+      .home:hover{
+        background-color: rgb(255, 185, 103);
+      }
+
+    }
+  }
+}
