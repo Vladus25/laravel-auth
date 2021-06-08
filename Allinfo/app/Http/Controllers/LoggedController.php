@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+//Importa la nostra mail blade.
+use Illuminate\Support\Facades\Mail;
+// Serve per mandare email al utente logato(al suo email)
+use Illuminate\Support\Facades\Auth;
+// Base
 use Illuminate\Http\Request;
+
+// Per collegare i modelli
 use App\Car;
 use App\Pilot;
 use App\Brand;
+
+// Per colegare nosta pagina 'NewCarNotify.php'
+use App\Mail\NewCarNotify;
 
 class LoggedController extends Controller
 {
@@ -56,6 +66,15 @@ class LoggedController extends Controller
 
     $car -> pilots() -> attach($request -> get('pilots_id'));
     $car -> save();
+
+    // Funzione per mandare la email
+    // Mail::to('test@mail.com') -> send(new NewCarNotify());
+
+    $user = Auth::user();
+
+    $mail = new NewCarNotify($car);
+
+    Mail::to($user -> email) -> send($mail);
 
     return redirect() -> route('home');
   }
