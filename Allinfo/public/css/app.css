@@ -10994,6 +10994,10 @@ body main ul li .edit {
   color: black;
 }
 
+body main ul li img {
+  max-width: 43px;
+}
+
 body main .button-center {
   text-align: center;
   padding-top: 40px;
@@ -11017,7 +11021,7 @@ body main .button-center .home:hover {
 body main ul.create-edit {
   display: flex;
   list-style-type: none;
-  width: 65%;
+  width: 79%;
   margin: auto;
   padding-top: 50px;
 }
@@ -11062,6 +11066,10 @@ body main ul.create-edit li #brand {
 
 body main ul.create-edit li .pilots {
   height: 400px;
+}
+
+body main ul.create-edit li img {
+  max-width: 43px;
 }
 
 body main .button-center {

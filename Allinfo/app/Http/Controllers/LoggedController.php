@@ -60,8 +60,15 @@ class LoggedController extends Controller
 
     $brand = Brand::findorFail($request -> get('brand_id'));
 
+    $img = $request -> file('image');
+    $imgExt = $img -> getClientOriginalExtension();
+    $imgNewName = time() . rand(0, 1000) . '.' . $imgExt;
+    $folder = '/car-img/';
+    $imgFile = $img -> storeAs($folder, $imgNewName, 'public');
+
     $car = Car::make($validate);
     $car -> brand() -> associate($brand);
+    $car -> img = $imgNewName;
     $car -> save();
 
     $car -> pilots() -> attach($request -> get('pilots_id'));

@@ -58,6 +58,10 @@ body{
         .edit{
           color: black;
         }
+
+        img{
+          max-width: 43px;
+        }
       }
     }
 
@@ -86,7 +90,7 @@ body{
 
       display: flex;
       list-style-type: none;
-      width: 65%;
+      width: 79%;
       margin: auto;
       padding-top: 50px;
 
@@ -129,6 +133,10 @@ body{
 
         .pilots{
           height: 400px;
+        }
+
+        img{
+          max-width: 43px;
         }
       }
     }

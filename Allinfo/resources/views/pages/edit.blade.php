@@ -31,6 +31,13 @@
           </li>
 
           <li>
+            <h2>Img</h2>
+            <div>
+              <input type="file" name="image" value="{{ $car -> img }}">
+            </div>
+          </li>
+
+          <li>
             <h2>Brand</h2>
             <div>
               <select id="brand" name="brand_id" required>

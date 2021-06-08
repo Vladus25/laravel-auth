@@ -2,9 +2,10 @@
 @section('content')
   <main>
     <div>
-      <form method="POST" action="{{ route('store') }}">
+      <form method="POST" action="{{ route('store') }}" enctype="multipart/form-data">
         @csrf
         @method('POST')
+
         <h1 class="text-center">Create New Car:</h1>
         <ul class="create-edit">
 
@@ -43,18 +44,12 @@
             </div>
           </li>
 
-          {{-- <li>
-            <h2>Pilots</h2>
+          <li>
+            <h2>File</h2>
             <div>
-              <select class="pilots" name="pilots_id[]" required multiple>
-                @foreach ($pilots as $pilot)
-                  <option value="{{ $pilot -> id }}">
-                    {{$pilot -> name}} {{$pilot -> lastname}}
-                  </option>
-                @endforeach
-              </select>
+              <input type="file" name="image">
             </div>
-          </li> --}}
+          </li>
 
           <li>
             <h2>Pilots</h2>

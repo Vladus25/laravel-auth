@@ -34,6 +34,15 @@
           </div>
         </li>
 
+        @if ($car -> img)
+          <li>
+            <h2>IMG</h2>
+            <div>
+              <img src="{{ asset('storage/car-img/' . $car -> img) }}" alt="Imagine del car">
+            </div>
+          </li>
+        @endif
+
         <li>
           <h2>Brand</h2>
           <div>
