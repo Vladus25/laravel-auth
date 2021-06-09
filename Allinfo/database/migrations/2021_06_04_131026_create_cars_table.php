@@ -20,8 +20,7 @@ class CreateCarsTable extends Migration
             $table -> string('model');
             $table -> bigInteger('kw');
             $table -> string('img') -> nullable();
-            // Serve per eliminare oggetto nella pagina ma non dentro la tabella
-            $table -> boolean('deleted') -> default(false);
+            $table -> softDeletes();
             $table -> bigInteger('brand_id') -> unsigned() -> index();
 
             $table->timestamps();

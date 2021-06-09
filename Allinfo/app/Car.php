@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Car extends Model
 {
@@ -21,4 +22,6 @@ class Car extends Model
 
     return $this -> belongsTo(Brand::class);
   }
+
+  use SoftDeletes;
 }

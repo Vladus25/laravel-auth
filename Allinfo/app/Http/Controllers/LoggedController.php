@@ -123,7 +123,7 @@ class LoggedController extends Controller
   public function deleted($id) {
 
     $car = Car::findorFail($id);
-    $car -> deleted = true;
+    $car -> delete();
     $car -> save();
 
     return redirect() -> route('home');
